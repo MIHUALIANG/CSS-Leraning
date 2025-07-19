@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        .box01 {
+            background-color: rgb(74, 144, 120);
+        }
+
+        .box02 {
+            background-color: rgb(32, 61, 51);
+        }
+
+        .box03 {
+            background-color: aquamarine;
+            /* float: left; */
+        }
+
+        .container {
+            width: 800px;
+            /* 若设置较小时会北=被挤到下一行 而不是直接消失 */
+            height: 100px;
+            float: left;
+        }
+
+        ul li {
+            float: left;
+            margin: 0px 20px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box01"></div>
+    <div class="box02"></div>
+    <div class="box03"></div>
+
+    <div class="container">
+        <ul type="none">
+            <li><a href="#">leading01</a></li>
+            <!-- 在导航栏的设置中给他们设立链接来实现 -->
+            <li>leading02</li>
+            <li>leading03</li>
+            <li>leading04</li>
+            <li>leading05</li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+
+</html>

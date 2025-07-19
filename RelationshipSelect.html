@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            color: #0f9cb5;
+            /* 后代选择器 ul 中的所有li元素 即使是嵌套了好几层 */
+        }
+
+        ul>li {
+            font-weight: bolder;
+            /* 子代选择器 子代中的li元素才会生效 */
+        }
+
+        ul+p {
+            text-decoration: line-through;
+            /*相邻选择器 相邻的（往下相邻）兄弟才会生效 */
+        }
+
+        ul~p{
+            font-family: 'Courier New', Courier, monospace;
+            /* 通用兄弟选择器 之后的所有兄弟都会生效 */
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>CSS选择器</li>
+        <li>CSS属性</li>
+        <li>CSS盒模型</li>
+        <li>CSS布局</li>
+        <div>
+            <Ol>
+                <li>CSS定位</li>
+                <li>CSS浮动</li>
+                <li>CSS Flexbox</li>
+                <li>CSS Grid</li>
+            </Ol>
+        </div>
+        <li>CSS动画</li>
+    </ul>
+
+    <P>相邻测试01</P>
+    <P>相邻测试02</P>
+
+</body>
+
+</html>

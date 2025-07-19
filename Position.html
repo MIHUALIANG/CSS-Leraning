@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            position: relative;
+            left: 200px;
+            top: 200px;
+        } */
+        /* 上述为相对定位 */
+        .box01 {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+        .box02 {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(31, 60, 50);
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+
+        /* 在使用绝对位置时 定位是脱离文档流的 允许压盖重叠的产生 */
+    </style>
+</head>
+
+<body>
+    <div class="box01"></div>
+    <div class="box02"></div>
+</body>
+
+</html>

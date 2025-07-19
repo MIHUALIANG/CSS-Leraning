@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 600px;
+            /* height: 200px; */
+            /* 此时若不设置父元素的高度 那么会被设置为0 */
+            background-color: aqua;
+            /* overflow: hidden;
+            clear: both; */
+            /* 若无法定义确定的height那么我们期望可以实现自适应 那么有如上解决方案 上述两行代码应当同时编写 overflow会自动撑开父元素 使得所有子元素在进行去浮动后能达到我们期望见到的结果 */
+        }
+
+        /* 或者还可以添加伪对象的形式解决该问题 与overflow:hidden;等效 */
+        .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .box {
+            height: 80px;
+            width: 100px;
+            background-color: aquamarine;
+            margin: 5px;
+            float: left;
+        }
+
+        .text {
+            width: 100px;
+            height: 80px;
+            background-color: blueviolet;
+            clear: both;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+        <!-- 若把这个没有参与浮动的text放在一堆有浮动的里面 那么会出现重叠现象 这是我们不希望会见到的 一因此需要对他进行去浮动 -->
+    </div>
+     <!-- <div class="text"></div> -->
+</body>
+
+</html>
