@@ -22,6 +22,7 @@
             position: absolute;
             left: 50px;
             top: 50px;
+            z-index: 2;
         }
 
         .box02 {
@@ -31,15 +32,54 @@
             position: absolute;
             left: 100px;
             top: 100px;
+            z-index: 1;
+            /* 按道理来说后面的应当覆盖前面的 但是添加z-index之后可以调整覆盖顺序 较大的覆盖较小的 */
         }
 
-        /* 在使用绝对位置时 定位是脱离文档流的 允许压盖重叠的产生 */
+        /* 在使用绝对位置时 定位是脱离文档流的 允许压盖重叠的产生 可以产生多层*/
+
+        .box03 {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(31, 60, 50);
+            position: fixed;
+            right: 100px;
+            bottom: 100px;
+
+            /*固定定位一般用于页面滚动时的不变元素设置 也是脱离文档流的 此时代表距离右边界100px 距离下边界100px*/
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(31, 155, 111);
+            position: absolute;
+            right: 400px;
+            bottom: 400px;
+        }
+
+        .box04 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(98, 200, 165);
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+        }
     </style>
 </head>
 
 <body>
     <div class="box01"></div>
     <div class="box02"></div>
+    <div class="box03"></div>
+    <div class="container">
+        <div class="box04">
+            <!-- 此时box04的图形是会跟随这父级元素container一起移动的  -->
+            <!-- 相对定位和绝对定位是相对于具有定位的父级元素进行调整的，如果父级元素不存在定位，则继续向上找，直到顶层文档 -->
+        </div>
+    </div>
+
 </body>
 
 </html>
