@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: cadetblue;
+        }
+
+        /* 全局选择器 */
+
+        p {
+            color: rgb(97, 102, 201);
+            font-size: 15px;
+        }
+
+        h3 {
+            color: black;
+            font-size: 30px;
+        }
+
+        span {
+            color: blueviolet;
+            font-size: 15px;
+        }
+
+        /* 相比较而言 元素选择器的优先级更高 且无论嵌套层数都会生效 */
+
+        .sos {
+            color: brown;
+        }
+
+        .size {
+            font-size: 20px;
+        }
+
+        /* 类选择器 可以被多个标签引用 */
+
+        #text {
+            color: blueviolet;
+            font-size: 20px;
+        }
+
+        /* h4{
+            color: #000;
+            font-size: 20px;
+        }
+
+        h5{
+            color: #000;
+            font-size: 20px;
+        } */
+
+        h4,
+        h5 {
+            color: #000;
+            font-size: 20px;
+        }
+
+        /* 合并样式 */
+    </style>
+</head>
+
+<body>
+    <p>CSS全局选择器使用</p>
+    <h3>CSS全局选择器使用</h3>
+
+    <p>对<span>span元素</span>设置独立style</p>
+    <!-- span标签原本无特殊意义 此时span的使用较多 -->
+
+    <p class="sos size">Emergency</p>
+    <!-- 可以同时引用多个类 -->
+
+    <p id="text">ID选择器的使用 one</p>
+    <p id="text">ID选择器的使用 two</p>
+    <!-- ID选择器的名字只能使用一次  此时情况2是不符合规范的-->
+
+
+    <h4>合并格式文本A</h4>
+    <h5>合并格式文本B</h5>
+
+    <!-- 各种选择器的优先级从高到低有:行内样式>ID选择器>类选择器>元素选择器  同级别是后面的生效-->
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 下列为文档流存在的几种问题 -->
+
+    <span>高矮不一测试</span>
+    <img src="./index03.jpg" title="栀子花">
+    <P>空格折叠 空格缺失</P>
+    <img src="./index03.jpg" title="栀子花">
+    <img src="./index03.jpg" title="栀子花">
+
+    <img src="./index03.jpg" title="栀子花"><img src="./index03.jpg" title="栀子花">
+    <!-- 上图所示的两张图片不会产生空隙 但是编码是不符合规范的 -->
+
+
+
+
+
+</body>
+
+</html>
