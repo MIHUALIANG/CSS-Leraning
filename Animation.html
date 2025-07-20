@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test {
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            border-radius: 25px;
+            box-shadow: 0 0 10px black;
+            margin: auto;
+            animation: MYAnimation 3s linear 0s infinite;
+        }
+
+        /* 当鼠标滑动到div时执行 */
+        div:hover {
+            animation-play-state: paused;
+
+        }
+
+        /* 动画设置 */
+        /* @keyframes MYAnimation{
+            from{
+
+            }
+            to{
+
+            }
+        } 若使用from to 那么一般难以设计多级动画*/
+        @keyframes MYAnimation {
+            0% {
+                width: 200px;
+                height: 200px;
+                background-color: aqua;
+            }
+
+            50% {
+                width: 100px;
+                height: 100px;
+                background-color: aquamarine;
+            }
+
+            100% {
+                background-color: azure;
+            }
+        }
+
+
+        .box {
+            width: 500px;
+            height: 400px;
+            background-color: rgb(109, 18, 121);
+            border-radius: 25px;
+            box-shadow: 5px 5px 5px rgb(214, 118, 206);
+            margin: 40px auto;
+            animation: breath 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes breath {
+            0% {
+                opacity: 0.2;
+                /* box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1); */
+            }
+
+            50% {
+                opacity: 0.5;
+                /* box-shadow: 0 1px 2px rgba(18, 190, 84, 0.76); */
+            }
+
+            100% {
+                opacity: 1;
+                /* box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1); */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test"></div>
+    <div class="box"></div>
+</body>
+
+</html>
