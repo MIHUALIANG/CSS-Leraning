@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .icon01 {
+            display: block;
+            /* 由于span是内联元素 可以通过上述代码将其转变为块元素 */
+            width: 75px;
+            height: 75px;
+            background-image: url(indexsprite.png);
+            background-position: -16px -15px;
+            /* 使用该属性可以选取背景图中的某一部分展示 */
+        }
+        .icon02 {
+            display: block;
+            width: 75px;
+            height: 75px;
+            background-image: url(indexsprite.png);
+            background-position: -140px -15px;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="icon01"></span>
+    <span class="icon02"></span>
+</body>
+
+</html>
