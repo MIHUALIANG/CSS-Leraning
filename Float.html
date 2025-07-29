@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .box {
-            width: 400px;
-            height: 400px;
-            background-color: aquamarine;
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: aquamarine;
 
-            /* float: left; */
-            float: right;
-            /* 此时会产生两层 box在上层  */
-        }
+        /* float: left; */
+        float: right;
+        /* 此时会产生两层 box在上层  */
+      }
 
-        .container {
-            width: 600px;
-            height: 600px;
-            background-color: rgb(33, 161, 161);
-        }
+      .container {
+        width: 600px;
+        height: 600px;
+        background-color: rgb(33, 161, 161);
+      }
 
-        img {
-            width: 400px;
-            float: left;
-        }
+      img {
+        width: 400px;
+        float: left;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- 浮动之后会脱离文档流 但是浮动只有左右浮动 会产生浮层的折叠现象 -->
     <div class="box"></div>
     <div class="container"></div>
 
     <div>
-        <img src="./index03.jpg">
-        <img src="./index03.jpg">
+      <img src="./index03.jpg" />
+      <img src="./index03.jpg" />
     </div>
-
-</body>
-
+  </body>
 </html>

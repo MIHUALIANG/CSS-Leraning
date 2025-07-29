@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .container {
-            width: 400px;
-            height: 400px;
-            background-color: aquamarine;
-            display: flex;
-            /* 开启弹性盒 */
-            flex-direction:row;
-            /* flex-direction:column; */
-            /* 弹性盒子默认值为水平摆放方式 */
+      .container {
+        width: 200px;
+        height: 400px;
+        background-color: aquamarine;
+        display: flex;
+        /* 开启弹性盒 */
+        flex-direction: row;
+        /* flex-direction:column; */
+        /* 弹性盒子默认值为水平摆放方式 */
 
-            justify-content: center;
-            align-items: center;
-            /* 注意水平摆放方式和摆放位置的区别 此时摆放位置为居中 justify-content为垂直方向设置 align-items为水平方向设置 */
-        }
+        justify-content: center;
+        align-items: center;
+        /* 注意水平摆放方式和摆放位置的区别 此时摆放位置为居中 justify-content为垂直方向设置 align-items为水平方向设置 */
+      }
 
-        .box01 {
-            width: 100px;
-            height: 100px;
-            background-color: beige;
-            flex-grow: 2;
-            /* 一旦设置了权重 此时width不再生效 这是由摆放方式决定的 */
-        }
+      .box01 {
+        width: 100px;
+        height: 100px;
+        background-color: beige;
+        flex-grow: 10;
+        /* 一旦设置了权重 此时width不再生效 这是由摆放方式决定的 */
+        /*此时对多余出来的部分进行划分权重再各自分配 */
+        /* 若父级元素长度或者高度不够 那么权重不会再生效 */
+      }
 
-        .box02 {
-            width: 100px;
-            height: 100px;
-            background-color: rgb(200, 200, 176);
-            flex-grow: 2;
-        }
+      .box02 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(200, 200, 176);
+        flex-grow: 2;
+      }
 
-        .box03 {
-            width: 100px;
-            height: 100px;
-            background-color: rgb(191, 191, 105);
-            flex-grow: 1;
-        }
+      .box03 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(191, 191, 105);
+        flex-grow: 1;
+      }
     </style>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <div class="container">
-        <div class="box01"></div>
-        <div class="box02"></div>
-        <div class="box03"></div>
+      <div class="box01"></div>
+      <div class="box02"></div>
+      <div class="box03"></div>
     </div>
-</body>
-
+  </body>
 </html>
